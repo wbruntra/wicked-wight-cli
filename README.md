@@ -2,11 +2,18 @@
 
 Generate random, fun passwords from the command line.
 
-Usage:
+## Options
 
-`wicked-pw`
+```
+-n, --num   Number of phrases [number]
+-l, --len   Length of phrases [number]
+-m, --mixed Generate mixed phrases (words and numbers)
+```
+Examples:
 
-Output: 
+```
+wicked-pw
+```
 
 ```
 =================================================================
@@ -18,7 +25,9 @@ hall nervously begin stallion beaten     =>   hallnervouslybeginstallionbeaten
 ================================================================================
 ```
 
-`wicked-pw -m`
+```
+wicked-pw -m
+```
 
 ```
 =================================================================

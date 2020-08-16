@@ -24,7 +24,7 @@ const run = () => {
 
     console.log(`${p.padEnd(longest + 4)} =>   ${noSpaces}`)
   })
-  console.log('='.repeat(80))
+  console.log('='.repeat(65))
 
   return phrases
 }
