@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/index.js',
@@ -6,6 +7,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'lib'),
   },
+  target: 'node',
   module: {
     rules: [
       {
@@ -25,4 +27,10 @@ module.exports = {
     warningsFilter: [/node_modules\/yargs/],
   },
   target: 'node',
+  plugins: [
+    new webpack.BannerPlugin({
+      banner: '#!/usr/bin/env node',
+      raw: true,
+    }),
+  ],
 }

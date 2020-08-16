@@ -1,16 +1,16 @@
 {
   "name": "wicked-wight-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "William Bruntrager <w.bruntrager@gmail.com",
   "description": "Simple Password Generator",
   "main": "./lib/main.js",
   "bin": {
-    "wickedpw": "./lib/main.js"
+    "wicked-pw": "./lib/main.js"
   },
   "scripts": {
     "dev": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production",
+    "build": "webpack --mode=production && chmod +x lib/main.js",
     "start": "node lib/main.js",
     "webpack": "webpack"
   },
