@@ -1,0 +1,5 @@
+src/
+.git/
+webpack.config.js
+package-lock.json
+yarn.lock

@@ -1,6 +1,6 @@
 {
   "name": "wicked-wight-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "William Bruntrager <w.bruntrager@gmail.com",
   "homepage": "https://github.com/wbruntra/wicked-wight-cli",
   "description": "Simple Password Generator",
@@ -10,7 +10,6 @@
   },
   "scripts": {
     "dev": "webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production && chmod +x lib/main.js",
     "start": "node lib/main.js",
     "webpack": "webpack"
@@ -19,11 +18,9 @@
     "passwords"
   ],
   "license": "ISC",
-  "devDependencies": {
-    "@babel/preset-env": "^7.11.0",
-    "webpack-cli": "^3.3.12"
-  },
   "dependencies": {
+    "@babel/preset-env": "^7.11.0",
+    "webpack-cli": "^3.3.12",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "babel-loader": "^8.1.0",
