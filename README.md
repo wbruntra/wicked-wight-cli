@@ -5,9 +5,9 @@ Generate random, fun passwords from the command line.
 ## Options
 
 ```
--n, --num   Number of phrases [number]
--l, --len   Length of phrases [number]
--m, --mixed Generate mixed phrases (words and numbers)
+  -m, --mixed         Use mix of words and numbers (default: false)
+  -n, --num <number>  Number of phrases to create (default: "5")
+  -l, --len <number>  Length of each phrase (default: "5")
 ```
 Examples:
 
