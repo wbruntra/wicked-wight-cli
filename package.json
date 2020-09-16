@@ -1,6 +1,6 @@
 {
   "name": "wicked-wight-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "William Bruntrager <w.bruntrager@gmail.com",
   "homepage": "https://github.com/wbruntra/wicked-wight-cli",
   "description": "Simple Password Generator",
