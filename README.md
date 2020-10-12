@@ -1,6 +1,6 @@
 # Wicked Wight CLI
 
-Generate random, fun passwords from the command line.
+Generate random, Game of Thrones-inspired passwords, from the command line.
 
 ## Options
 
@@ -12,6 +12,7 @@ Generate random, fun passwords from the command line.
   -u, --upper         Include an uppercase letter (default: false)
   -h, --help          display help for command
 ```
+
 Examples:
 
 ```

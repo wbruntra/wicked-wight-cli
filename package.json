@@ -1,9 +1,9 @@
 {
   "name": "wicked-wight-cli",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "William Bruntrager <w.bruntrager@gmail.com",
   "homepage": "https://github.com/wbruntra/wicked-wight-cli",
-  "description": "Simple Password Generator",
+  "description": "Game of Thrones Password Generator",
   "main": "./lib/main.js",
   "bin": {
     "wicked-pw": "./lib/main.js"
