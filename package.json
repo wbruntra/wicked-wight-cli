@@ -13,7 +13,8 @@
     "build": "webpack --mode=production && chmod +x lib/main.js",
     "start": "node lib/main.js",
     "test": "node -r esm src/index.js",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "prepare": "husky install"
   },
   "keywords": [
     "passwords"
@@ -28,5 +29,8 @@
     "esm": "^3.2.25",
     "webpack": "^5.36.0",
     "webpack-cli": "^4.6.0"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0"
   }
 }
