@@ -2,6 +2,27 @@
 
 Generate random, Game of Thrones-inspired passwords, from the command line.
 
+## Build & Development
+
+This project uses [Bun](https://bun.sh) as the bundler and runtime.
+
+```bash
+# Install dependencies
+bun install
+
+# Development (watch mode)
+bun run dev
+
+# Build production bundle
+bun run build
+
+# Run the CLI
+bun run start -- --help
+
+# Run tests
+bun test
+```
+
 ## Options
 
 ```

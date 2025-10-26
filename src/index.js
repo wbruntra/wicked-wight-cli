@@ -1,6 +1,8 @@
-const wordlist = require('./data/got-long-words.json')
-const { generatePhrases, upperFirst, randomChoice } = require('./utils')
-const { program } = require('commander')
+#!/usr/bin/env node
+import wordlist from './data/got-long-words.json' assert { type: 'json' }
+import { generatePhrases, upperFirst, randomChoice } from './utils.js'
+import { program } from 'commander'
+
 const specialCharacters = ['!', '@', '#']
 
 const helpText = `
@@ -54,6 +56,6 @@ const run = () => {
   return phrases
 }
 
-if (require.main === module) {
+if (import.meta.main) {
   run()
 }
