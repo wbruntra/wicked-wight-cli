@@ -40,7 +40,7 @@ The test suite includes comprehensive coverage of all utility functions:
 Before any commit, the following checks are automatically run:
 
 1. **Unit tests** (`bun test`) - All 27 tests must pass
-2. **Build** (`bun run build`) - The project must build successfully
+2. **Build** (`bun run build`) - The project must build successfully with minification
 
 This ensures code quality and that the bundle is always valid before committing.
 

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "bun build --watch src/index.js --outfile lib/main.js",
-    "build": "bun build src/index.js --outfile lib/main.js && chmod +x lib/main.js",
+    "build": "bun build --minify src/index.js --outfile lib/main.js && chmod +x lib/main.js",
     "start": "bun lib/main.js",
     "test": "bun test",
     "prepare": "husky install"

@@ -13,7 +13,7 @@ bun install
 # Development (watch mode)
 bun run dev
 
-# Build production bundle
+# Build production bundle (minified)
 bun run build
 
 # Run the CLI
