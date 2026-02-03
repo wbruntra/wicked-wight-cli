@@ -26,10 +26,9 @@ program
   .option('-s, --symbol', 'Include a special character (#)', false)
   .option('-u, --upper', 'Include an uppercase letter', false)
   .addHelpText('after', helpText)
-program.parse()
-
 
 const run = () => {
+  program.parse(process.argv)
   const options = program.opts()
   const phrases = generatePhrases(
     parseInt(options.num),

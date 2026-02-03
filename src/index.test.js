@@ -215,4 +215,64 @@ describe("Password Generator Utilities", () => {
       });
     });
   });
+
+  describe("CLI argument parsing", () => {
+    it("should accept command-line arguments", async () => {
+      const { spawnSync } = await import("child_process");
+      const result = spawnSync("./lib/main.js", ["-n", "2", "-l", "3"], {
+        encoding: "utf8",
+      });
+
+      expect(result.status).toBe(0);
+      const lines = result.stdout.trim().split("\n");
+      // Should have 2 phrases (plus 2 separator lines)
+      expect(lines.length).toBe(4);
+      // Each phrase should have 3 words
+      lines.slice(1, 3).forEach((line) => {
+        const phrase = line.split("=>")[0].trim();
+        const words = phrase.split(" ");
+        expect(words.length).toBe(3);
+      });
+    });
+
+    it("should respect the --mixed flag", async () => {
+      const { spawnSync } = await import("child_process");
+      const result = spawnSync("./lib/main.js", ["-m", "-n", "1", "-l", "5"], {
+        encoding: "utf8",
+      });
+
+      expect(result.status).toBe(0);
+      const lines = result.stdout.trim().split("\n");
+      const phrase = lines[1].split("=>")[0].trim();
+      const tokens = phrase.split(" ");
+      expect(tokens.length).toBe(5);
+      // In mixed mode: words at even indices, numbers at odd indices
+      for (let i = 0; i < tokens.length; i++) {
+        if (i % 2 === 0) {
+          // Even index should be a word (not all digits)
+          expect(/^\d+$/.test(tokens[i])).toBe(false);
+        } else {
+          // Odd index should be a number
+          expect(/^\d+$/.test(tokens[i])).toBe(true);
+        }
+      }
+    });
+
+    it("should respect --upper and --symbol flags", async () => {
+      const { spawnSync } = await import("child_process");
+      const result = spawnSync(
+        "./lib/main.js",
+        ["-n", "1", "-l", "3", "-u", "-s"],
+        { encoding: "utf8" }
+      );
+
+      expect(result.status).toBe(0);
+      const lines = result.stdout.trim().split("\n");
+      const output = lines[1].split("=>")[1].trim();
+      // Should start with uppercase
+      expect(/^[A-Z]/.test(output)).toBe(true);
+      // Should end with #
+      expect(output.endsWith("#")).toBe(true);
+    });
+  });
 });
